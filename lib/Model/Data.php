@@ -61,6 +61,11 @@ class Data {
 	 * @Column(type="float")
 	 */
 	protected $value;
+	
+	/**
+         * @Column(type="float")
+ 	 */
+	protected $meter;
 
 	/**
 	 * @ManyToOne(targetEntity="Channel", inversedBy="data")
@@ -68,15 +73,16 @@ class Data {
 	 */
 	protected $channel;
 
-	public function __construct(Model\Channel $channel, $timestamp, $value) {
+	public function __construct(Model\Channel $channel, $timestamp, $value, $meter) {
 		$this->channel = $channel;
 
 		$this->value = $value;
 		$this->timestamp = $timestamp;
+		$this->meter = $meter;
 	}
 
 	public function toArray() {
-		return array('channel' => $this->channel, 'timestamp' => $this->timestamp, 'value' => $this->value);
+		return array('channel' => $this->channel, 'timestamp' => $this->timestamp, 'value' => $this->value,'meter'=>$this->meter);
 	}
 
 	/**
@@ -85,6 +91,7 @@ class Data {
 	public function getValue() { return $this->value; }
 	public function getTimestamp() { return $this->timestamp; }
 	public function getChannel() { return $this->channel; }
+	public function getMeter() { return $this->meter; }
 }
 
 ?>

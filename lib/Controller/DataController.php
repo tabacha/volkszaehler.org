@@ -57,21 +57,33 @@ class DataController extends Controller {
 			$rawPost = file_get_contents('php://input');
 			$json = Util\JSON::decode($rawPost);
 			foreach ($json as $tuple) {
-				$channel->addData(new Model\Data($channel, (double) round($tuple[0]), $tuple[1]));
+				$channel->addData(new Model\Data($channel, (double) round($tuple[0]), $tuple[1],null));
 			}
 		} catch (Util\JSONException $e) { /* fallback to old method */
 			$timestamp = $this->view->request->getParameter('ts');
 			$value = $this->view->request->getParameter('value');
+			$meter = $this->view->request->getParameter('meter');
 
 			if (is_null($timestamp)) {
 				$timestamp = (double) round(microtime(TRUE) * 1000);
 			}
-			
-			if (is_null($value)) {
+		        if (is_null($value) && (!(is_null($meter)))) {
+				$old_meter=$channel->getLastMeter($this->em);
+				if ($old_meter == "") {
+				   $channel->addData(new Model\Data($channel,$timestamp,0,$meter));
+				} else {
+				   if ($old_meter<$meter) {
+					$value=$meter-$old_meter;
+					$channel->addData(new Model\Data($channel,$timestamp,$value,$meter));
+				   } 				
+                                }
+				$value = -1;
+                        } else  if (is_null($value)) { 
 				$value = 1;
 			}
-		
-			$channel->addData(new Model\Data($channel, $timestamp, $value));
+			if ($value>0) {
+ 				$channel->addData(new Model\Data($channel, $timestamp, $value,null));
+			}
 		}
 
 		$this->em->flush();

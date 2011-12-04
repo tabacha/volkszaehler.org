@@ -57,6 +57,14 @@ class Channel extends Entity {
 		$this->data->add($data);
 	}
 	
+	/**
+	 * Get last Meter
+	 */
+	
+	public function getLastMeter(\Doctrine\ORM\EntityManager $em) {
+	      $sql = 'SELECT meter FROM data WHERE channel_id=? AND meter IS NOT NULL ORDER BY ID DESC LIMIT 1';
+	      return $em->getConnection()->fetchColumn($sql,array($this->id),0);
+        }	
 	
 	/**
 	 * Purge data
