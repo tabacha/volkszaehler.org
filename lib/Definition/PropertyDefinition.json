@@ -45,6 +45,19 @@
 		}
 	},
 	{
+		"name"			: "interpreter",
+		"type"			: "multiple",
+		"options" : [
+			"Aggregator",
+			"Meter",
+			"Sensor"
+			],
+		"translation"		: {
+			"de" : "Interpreter",
+			"en" : "Interpreter"
+		}
+	},
+	{
 		"name"			: "public",
 		"type"			: "boolean",
 		"translation"		: {

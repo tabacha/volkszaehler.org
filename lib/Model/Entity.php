@@ -205,10 +205,14 @@ abstract class Entity {
 	public function getDefinition() { return Definition\EntityDefinition::get($this->type); }
 	public function getInterpreter() { 
 		if ($this->hasProperty("interpreter")) {
-		   return "Volkszaehler\\Interpreter\\"+$this->getProperty("interpreter");
+		   $str="Volkszaehler\\Interpreter\\".$this->getProperty("interpreter")."Interpreter";
+#		   throw new \Exception("Exe: ".$str);
 		} else {
-	 	   return $this->getDefinition()->getDefaultInterpreter(); 
+	 	   $str=$this->getDefinition()->getDefaultInterpreter(); 
 		}
+#		print "$str\n";
+	
+		return $str;
 	}
 }
 

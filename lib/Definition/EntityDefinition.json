@@ -30,7 +30,7 @@
   * (Take a look at EntityDefinition.php)
   *
   * $defaultRequired = array('title');
-  * $defaultOptional = array('description', 'public', 'color', 'active', 'style', 'details:', 'owner:', 'address:', 'link');
+  * $defaultOptional = array('description', 'public', 'color', 'active', 'style', 'details:', 'owner:', 'address:', 'link',"interpreter");
   */
   
 [
@@ -99,7 +99,7 @@
 	{
 		"name"			: "power",
 		"required"		: ["resolution"],
-		"optional"		: ["tolerance", "cost", "local"],
+		"optional"		: ["tolerance", "cost", "local","interpreter"],
 		"icon"			: "bolt.png",
 		"unit"			: "W",
 		"defaultInterpreter"	: "Volkszaehler\\Interpreter\\MeterInterpreter",
