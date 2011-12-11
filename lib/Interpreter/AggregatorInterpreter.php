@@ -59,7 +59,7 @@ class AggregatorInterpreter extends Interpreter {
 		
 		foreach ($aggregator->getChildren() as $child) {
 			if ($child instanceof Model\Channel) {
-				$class = $child->getDefinition()->getInterpreter();
+				$class = $child->getInterpreter();
 				$this->childrenInterpreter[] = new $class($child, $em, $from, $to, $tupleCount, $groupBy);
 			}
 		}

@@ -42,7 +42,7 @@ class DataController extends Controller {
 		$to = $this->view->request->getParameter('to');
 		$tuples = $this->view->request->getParameter('tuples');
 		$groupBy = $this->view->request->getParameter('group');
-		$class = $entity->getDefinition()->getInterpreter();
+		$class = $entity->getInterpreter();
 
 		return new $class($entity, $this->em, $from, $to, $tuples, $groupBy);
 	}

@@ -203,6 +203,13 @@ abstract class Entity {
 	public function getUuid() { return $this->uuid; }	// read only
 	public function getType() { return $this->type; }	// read only
 	public function getDefinition() { return Definition\EntityDefinition::get($this->type); }
+	public function getInterpreter() { 
+		if ($this->hasProperty("interpreter")) {
+		   return "Volkszaehler\\Interpreter\\"+$this->getProperty("interpreter");
+		} else {
+	 	   return $this->getDefinition()->getDefaultInterpreter(); 
+		}
+	}
 }
 
 ?>

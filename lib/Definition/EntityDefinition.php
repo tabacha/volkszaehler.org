@@ -56,7 +56,7 @@ class EntityDefinition extends Definition {
 	 *
 	 * @var string
 	 */
-	public $interpreter;
+	public $defaultInterpreter;
 	
 	/**
 	 * Style for plotting
@@ -118,7 +118,7 @@ class EntityDefinition extends Definition {
 	/*
 	 * Setter & Getter
 	 */
-	public function getInterpreter() { return $this->interpreter; }
+	public function getDefaultInterpreter() { return $this->defaultInterpreter; }
 	public function getModel() { return $this->model; }
 	public function getUnit() { return $this->unit; }
 	public function getRequiredProperties() { return $this->required; }

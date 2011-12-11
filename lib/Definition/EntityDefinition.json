@@ -37,7 +37,7 @@
 	{
 		"name"			: "group",
 		"icon"			: "folder.png",
-		"interpreter"		: "Volkszaehler\\Interpreter\\AggregatorInterpreter",
+		"defaultInterpreter"	: "Volkszaehler\\Interpreter\\AggregatorInterpreter",
 		"model"			: "Volkszaehler\\Model\\Aggregator",
 		"translation"		: {
 			"de" : "Gruppe",
@@ -48,7 +48,7 @@
 	{
 		"name"			: "user",
 		"icon"			: "user.png",
-		"interpreter"		: "Volkszaehler\\Interpreter\\AggregatorInterpreter",
+		"defaultInterpreter"	: "Volkszaehler\\Interpreter\\AggregatorInterpreter",
 		"model"			: "Volkszaehler\\Model\\Aggregator",
 		"translation"		: {
 			"de" : "Nutzer",
@@ -59,7 +59,7 @@
 	{
 		"name"			: "building",
 		"icon"			: "house.png",
-		"interpreter"		: "Volkszaehler\\Interpreter\\AggregatorInterpreter",
+		"defaultInterpreter"	: "Volkszaehler\\Interpreter\\AggregatorInterpreter",
 		"model"			: "Volkszaehler\\Model\\Aggregator",
 		"translation"		: {
 			"de" : "Gebäude",
@@ -72,7 +72,7 @@
 		"optional"		: ["tolerance", "local"],
 		"icon"			: "waterdrop.png",
 		"unit"			: "m^3/h",
-		"interpreter"		: "Volkszaehler\\Interpreter\\SensorInterpreter",
+		"defaultInterpreter"	: "Volkszaehler\\Interpreter\\SensorInterpreter",
 		"model"			: "Volkszaehler\\Model\\Channel",
 		"hasConsumption"	: true,
 		"translation"		: {
@@ -87,7 +87,7 @@
 		"optional"		: ["tolerance", "cost", "local"],
 		"icon"			: "flame.png",
 		"unit"			: "W",
-		"interpreter"		: "Volkszaehler\\Interpreter\\MeterInterpreter",
+		"defaultInterpreter"	: "Volkszaehler\\Interpreter\\MeterInterpreter",
 		"model"			: "Volkszaehler\\Model\\Channel",
 		"hasConsumption"	: true,
 		"translation"		: {
@@ -102,7 +102,7 @@
 		"optional"		: ["tolerance", "cost", "local"],
 		"icon"			: "bolt.png",
 		"unit"			: "W",
-		"interpreter"		: "Volkszaehler\\Interpreter\\MeterInterpreter",
+		"defaultInterpreter"	: "Volkszaehler\\Interpreter\\MeterInterpreter",
 		"model"			: "Volkszaehler\\Model\\Channel",
 		"hasConsumption"	: true,
 		"translation"		: {
@@ -116,7 +116,7 @@
 		"optional"		: ["tolerance", "cost", "local"],
 		"icon"			: "bolt.png",
 		"unit"			: "W",
-		"interpreter"		: "Volkszaehler\\Interpreter\\SensorInterpreter",
+		"defaultInterpreter"	: "Volkszaehler\\Interpreter\\SensorInterpreter",
 		"style"			: "steps",
 		"model"			: "Volkszaehler\\Model\\Channel",
 		"hasConsumption"	: true,
@@ -132,7 +132,7 @@
 		"optional"		: ["tolerance", "cost", "local"],
 		"icon"			: "flame.png",
 		"unit"			: "m³/h",
-		"interpreter"		: "Volkszaehler\\Interpreter\\MeterInterpreter",
+		"defaultInterpreter"	: "Volkszaehler\\Interpreter\\MeterInterpreter",
 		"model"			: "Volkszaehler\\Model\\Channel",
 		"hasConsumption"	: true,
 		"translation"		: {
@@ -147,7 +147,7 @@
 		"optional"		: ["tolerance", "cost", "local"],
 		"icon"			: "waterdrop.png",
 		"unit"			: "l/h",
-		"interpreter"		: "Volkszaehler\\Interpreter\\MeterInterpreter",
+		"defaultInterpreter"	: "Volkszaehler\\Interpreter\\MeterInterpreter",
 		"model"			: "Volkszaehler\\Model\\Channel",
 		"hasConsumption"	: true,
 		"translation"		: {
@@ -161,7 +161,7 @@
 		"optional"		: ["tolerance", "local"],
 		"icon"			: "thermometer.png",
 		"unit"			: "°C",
-		"interpreter"		: "Volkszaehler\\Interpreter\\SensorInterpreter",
+		"defaultInterpreter"	: "Volkszaehler\\Interpreter\\SensorInterpreter",
 		"model"			: "Volkszaehler\\Model\\Channel",
 		"translation"		: {
 			"de" : "Temperatur",
@@ -174,7 +174,7 @@
 		"optional"		: ["tolerance", "local"],
 		"icon"			: "cloud.png",
 		"unit"			: "hPa",
-		"interpreter"		: "Volkszaehler\\Interpreter\\SensorInterpreter",
+		"defaultInterpreter"	: "Volkszaehler\\Interpreter\\SensorInterpreter",
 		"model"			: "Volkszaehler\\Model\\Channel",
 		"translation"		: {
 			"de" : "Luftdruck",
@@ -187,7 +187,7 @@
 		"optional"		: ["tolerance", "local"],
 		"icon"			: "rain.png",
 		"unit"			: "%",
-		"interpreter"		: "Volkszaehler\\Interpreter\\SensorInterpreter",
+		"defaultInterpreter"	: "Volkszaehler\\Interpreter\\SensorInterpreter",
 		"model"			: "Volkszaehler\\Model\\Channel",
 		"translation"		: {
 			"de" : "Luftfeuchtigkeit",
@@ -200,7 +200,7 @@
 		"optional"		: ["tolerance", "local"],
 		"icon"			: "propeller.png",
 		"unit"			: "km/h",
-		"interpreter"		: "Volkszaehler\\Interpreter\\SensorInterpreter",
+		"defaultInterpreter"	: "Volkszaehler\\Interpreter\\SensorInterpreter",
 		"model"			: "Volkszaehler\\Model\\Channel",
 		"translation"		: {
 			"de" : "Windgeschwindigkeit",
@@ -213,7 +213,7 @@
 		"optional"		: ["tolerance", "local", "resolution"],
 		"icon"			: "radioactivity.png",
 		"unit"			: "μSv",
-		"interpreter"		: "Volkszaehler\\Interpreter\\SensorInterpreter",
+		"defaultInterpreter"	: "Volkszaehler\\Interpreter\\SensorInterpreter",
 		"model"			: "Volkszaehler\\Model\\Channel",
 		"translation"		: {
 			"de" : "Radioaktivität (Dosis)",
@@ -226,7 +226,7 @@
 		"optional"		: ["tolerance", "local"],
 		"icon"			: "sun.png",
 		"unit"			: "cd",
-		"interpreter"		: "Volkszaehler\\Interpreter\\SensorInterpreter",
+		"defaultInterpreter"	: "Volkszaehler\\Interpreter\\SensorInterpreter",
 		"model"			: "Volkszaehler\\Model\\Channel",
 		"translation"		: {
 			"de" : "Lichtstärke",
@@ -240,7 +240,7 @@
 		"optional"		: ["tolerance", "local"],
 		"icon"			: "clock.png",
 		"unit"			: "h",
-		"interpreter"		: "Volkszaehler\\Interpreter\\MeterInterpreter",
+		"defaultInterpreter"	: "Volkszaehler\\Interpreter\\MeterInterpreter",
 		"model"			: "Volkszaehler\\Model\\Channel",
 		"translation"		: {
 			"de" : "Betriebsstundenzähler",
